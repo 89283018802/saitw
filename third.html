@@ -1,0 +1,53 @@
+﻿<?php include ('connect.php');?>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="description" content="description"/>
+<meta name="keywords" content="keywords"/> 
+ 
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<title>Sclerotica </title>
+	<style type="text/css">
+		.comment{
+			border: 1px solid #fedecc;
+			margin: 10px;
+			padding: 10px;
+			font-family: Arial;
+			font-size: 75%;
+			border-radius: 6px;
+			box-shadow: 2px 2px 2px #fedecc;
+
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="container"><div class="inner_copy"><div class="inner_copy">Сайт для хранения ссылок</div></div>
+		<div class="gfx"><a href="#"><span></span></a></div>
+		<div class="menu">
+			<a href="index.html"><span>Главная</span></a>
+			<a href="second.html"><span>Сохранение</span></a>
+			<a href="third.html"><span>Мои ссылки</span></a>		
+			<a href="four.html"><span>Обратная связь</span></a>
+			<a href="five.html"><span>Контактная информация</span></a>
+			<a href="#" id="last"><span>...</span></a>
+		</div>
+		<div class="content">
+			<div class="item">
+				<?php
+$result = mysql_query("SELECT * FROM niga",$db);
+$comment = mysql_fetch_array($result);
+do{echo "<div class='comment'>Категория: <strong>".$comment['name']."</strong><br> Пользователь: <strong>".$comment['category']."</strong><br> Ссылка: <strong>".$comment['link']."</strong><br>  Заметка: <strong>".$comment['rec']."</strong></div>";
+			}while($comment = mysql_fetch_array($result));
+			?>
+		</div>
+	</div>
+		<div class="footer">
+			<span class="left">&copy; 2022 <a href="#"></span>
+			<span class="right"></span>
+			<div class="center"></div>
+			<div class="clearer"></div>
+		</div>
+	</div>	
+</div>
+</body>
+</html>

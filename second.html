@@ -1,0 +1,51 @@
+﻿<?php include ('connect.php');?>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="description" content="description"/>
+<meta name="keywords" content="keywords"/> 
+ 
+<link rel="stylesheet" type="text/css" href="default.css"/>
+<title>Sclerotica </title>
+</head>
+<body>
+<div class="main">
+	<div class="container"><div class="inner_copy"><div class="inner_copy">Сайт для хранения ссылок</div></div>
+		<div class="gfx"><a href="#"><span></span></a></div>
+		<div class="menu">
+			<a href="index.html"><span>Главная</span></a>
+			<a href="second.html"><span>Сохранение</span></a>
+			<a href="third.html"><span>Мои ссылки</span></a>		
+			<a href="four.html"><span>Обратная связь</span></a>
+			<a href="five.html"><span>Контактная информация</span></a>
+			<a href="#" id="last"><span>...</span></a>
+		</div>
+		<div class="content">
+			<div class="item">
+			<h1> Форма сохранения </h1>
+			<p>Заполните поля для и нажмите кнопку <strong>"Отправить"</strong></p>
+					<form action='favicon.php' method='post' class="contact-form">
+                                            <div class="form-group">
+                                                <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Категория"  required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" id="contact_category" name="contact_category" class="form-control" placeholder="E-mail"  required>
+                                            </div>
+				                      <div class="form-group">
+					                   <input type="text" id="contact_sse" name="sse" class="form-control" placeholder="Ссылка"  required>
+				                        </div>
+                                            <div class="form-group">
+                                                <textarea id="contact_rec" name="contact_rec" class="form-control" rows="5" placeholder="Заметка" required></textarea>
+                                            </div>                                            
+                                            <button type="submit" class="float-right tm-button">Отправить</button>
+                                        </form>    
+		</div>
+		<div class="footer">
+			<span class="left">&copy; 2022 <a href="#"></span>
+			<span class="right"></span>
+			<div class="center"></div>
+			<div class="clearer"></div>
+		</div>
+	</div>	
+</div>
+</body>
+</html>
